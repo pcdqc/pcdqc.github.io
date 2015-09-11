@@ -8,24 +8,27 @@
 </head>
 <script type="text/javascript" src="js/go.js"></script>
 <body>
-<div class="content">
+<div class="content"> 
 	<div class="header">
 		<div class="lefthead">请出拳吧，少年！</div>
 		<div class="middlehead"><label id="results"></label></div>
-		<div class="righthead">你已经获胜了<label id="number">||</label>次</div>
+		<div class="righthead">你已经获胜了<label id="number">0</label>次</div>
 	</div>
-	<div class="contentbefore">
+	<div class="contentbefore" id="content">
 		<!-- <div class="leftimg" onclick="calc(this)" id="stone"><img src="image/stone.jpg" width="142px" height="130px"></div> -->
 		<!-- <input type=button style="width=300;height=300;background="c.jpg"> -->
-		<input type="button"style="width=142;height=130" background="stone.jpg">
-		<!-- <button class="leftbutton" onclick="calc(this)"  id="stone"></button> -->
-		<div class="middleimg" onclick="calc(this)" id="no"><img src="image/no.jpg" width="142px" height="130px"></div>
-		<div class="rightimg" onclick="calc(this)" id="jd"><img src="image/jd.jpg" width="142px" height="130px"></div>
+	 
+		<button class="leftbutton" onclick="calc(this)"  id="0" style="width:142px ;height:130px;background:url('image/0.jpg')">jd</button>
+		<button class="middlebutton" onclick="calc(this)"  id="1" style="width:142px ;height:130px;background:url('image/1.jpg')">no</button>
+		<button class="rightbutton" onclick="calc(this)"  id="2" style="width:142px ;height:130px;background:url('image/2.jpg')">stones</button>
+
+		<!-- <div class="middleimg" onclick="calc(this)" id="no"><img src="image/no.jpg" width="142px" height="130px"></div>
+		<div class="rightimg" onclick="calc(this)" id="jd"><img src="image/jd.jpg" width="142px" height="130px"></div> -->
 	</div>
-	<div class="contentafter">
-		<div class="leftimg2"></div>
-		<div class="middleimg2"></div>
-		<div class="rightimg2"></div>
+	<div class="contentafter" id="content1">
+		<div id='left'>You</div>
+		<div id='text'><button onclick="bak()"  >Continue</button></div>
+		<div id='right'>Computer</div>
 	</div>
 </div>
 </body>

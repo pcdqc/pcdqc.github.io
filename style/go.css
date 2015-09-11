@@ -1,95 +1,118 @@
-
-*{
-	margin: auto;
-	padding: auto;
+@charset "utf-8";
+* {
+  margin: auto;
+  padding: auto;
 }
-.content{
-	margin-top: 100px;
-	width: 600px;
-	height: 400px;
-	background-color: #7596FD;
+.content {
+  /*margin-top: 100px;*/
+  width: 600px;
+  height: 400px;
+  background-color: #7596FD;
 }
-.header{
-	margin-left: auto;
-  	margin-right: auto;
-  	width: 600px;
-  	*zoom: 1;
+.header {
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  *zoom: 1;
 }
 .header:before,
-.header:after{
-	display: block;
-	content: "";
+.header:after {
+  display: block;
+  content: "";
 }
-.header:after{
-	clear: both;
+.header:after {
+  clear: both;
 }
-.lefthead{
-
-	font-style: 22px;
-	width: 240px;
-	height: 28px;
-	/*background-color: red;*/
-	float: left;
-	padding-top: 3px;
-	text-indent: 2em;
+.lefthead {
+  font-style: 22px;
+  width: 240px;
+  height: 28px;
+  /*background-color: red;*/
+  float: left;
+  padding-top: 3px;
+  text-indent: 2em;
 }
-.middlehead{
-	padding-top: 3px;
-	margin-left: 5px;
-	text-indent: 1em;
-	width: 100px;
-	height: 28px;
-	/*background-color: red;*/
-	float: left;
+.middlehead {
+  padding-top: 3px;
+  margin-left: 5px;
+  text-indent: 1em;
+  width: 100px;
+  height: 28px;
+  /*background-color: red;*/
+  float: left;
 }
-.righthead{
-	padding-top: 3px;
-	width: 240px;
-	height: 28px;
-	/*background-color: red;*/
-	float: right;
-	text-indent: 2em;
-	/*clear: both;*/
+.righthead {
+  padding-top: 3px;
+  width: 240px;
+  height: 28px;
+  /*background-color: red;*/
+  float: right;
+  text-indent: 2em;
+  /*clear: both;*/
 }
-.contentbefore{
-	margin-top: 100px;
-	margin-left: auto;
-    margin-right: auto;
-    width: 600px;
-    *zoom: 1;
-	
+.contentbefore {
+  display: block;
+  margin-top: 100px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 600px;
+  *zoom: 1;
 }
 .contentbefore,
-.contentafter{
-	display: table;
-  	content: "";
-    
+.contentafter {
+  display: table;
+  content: "";
 }
-/*.leftimg
-{
-	float: left;
-	border:2px solid white;
-    /*position: absolute;*/
-    /*margin-left: 20px;*/
-}*/
-.leftbutton{
-	/*border:2px solid white;*/
-	/*display: inline-block;*/
-	background: url("image/stone.jpg");
-	/*width: 142px;
-	height: 130px;*/
+.leftbutton {
+  display: block;
+  /*border:2px solid white;*/
+  /*display: inline-block;*/
+  float: left;
+  /*border:none;*/
+  /*background-color: red;*/
+  /*background: url("image/stone.jpg") no-repeat;*/
+  width: 142px;
+  height: 130px;
 }
-.middleimg{
-	float: left;
-	/*position: absolute;*/
-	margin-left: 80px;
-	border:2px solid white;
-
+.middlebutton {
+  /*border:none;*/
+  margin-left: 5px;
+  width: 142px;
+  height: 130px;
+  /*position: absolute;*/
+  margin-left: 80px;
+  /*border:2px solid white;*/
 }
-.rightimg{
-	float: right;
-	margin-right: 20px;
-	border:2px solid white;
-
-	/*position: absolute;*/
+.rightbutton {
+  float: right;
+  margin-right: 20px;
+  /*border:2px solid white;*/
+  width: 142px;
+  height: 130px;
+  /*position: absolute;*/
+}
+.contentafter {
+  width: 600px;
+  height: 280px;
+  display: none;
+  margin-top: 100px;
+}
+.contentafter #left {
+  width: 142px;
+  height: 130px;
+  background-color: red;
+  border: 1px solid red;
+  float: left;
+}
+.contentafter #text {
+  width: 80px;
+  height: 60px;
+}
+.contentafter #right {
+  float: right;
+  display: inline;
+  border: 1px solid black;
+  width: 142px;
+  height: 130px;
+  font-family: "Microsoft Yahei", "微软雅黑";
 }
