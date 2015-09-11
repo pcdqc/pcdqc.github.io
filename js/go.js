@@ -18,7 +18,7 @@ function calc(result){
 	var re1 = 'Dogfall.',re2='You Win!!!',re3='You Lose!!';
 	var res =  parseInt(result.id);				//将ID值!转换为number型
 
-	var conbefore = document.getElementById('content'); //获取
+	var conbefore = document.getElementById('content'); //获取DIV。如果使用getElementsByName 则会返回一个NodeList数组
 	// console.dir(conbefore)
 	// conbefore.style.display = "none";
 	var conafter = document.getElementById('content1')
@@ -45,17 +45,17 @@ function calc(result){
 	// }
 	// else
 	// 	num.innerHTML = re3+'dian:'+rand ;
-	var jieguo = (res - rand+4)%3-1;
+	var jieguo = (res - rand+4)%3-1;			//判定规则
 	// console.log(jieguo)
 	 // console.log(jieguo);
-	function changeTo(){
+	function changeTo(){						//获胜
 	 	conbefore.style.display = "none";
 		conafter.style.display = "block";
 		left.style.background = "url(image/"+res+".jpg)"
 		text.style.innerHTML = "Congratulation!"
 		right.style.background = "url(image/"+rand+".jpg)"
 	 };
-	if( jieguo== -1){
+	if( jieguo== -1){							//判定结果对应的操作 WIN
 		num.innerHTML = re2  ;
 		changeTo();
 		times+=1;
@@ -65,15 +65,15 @@ function calc(result){
 
 	}
 
-	else if(jieguo ==1){
+	else if(jieguo ==1){						//Lose
 		num.innerHTML = re3  ;
 		
 		 
 	}
-	else
+	else										//	dogfall
 		num.innerHTML = re1;
 
-	total.innerHTML = times;
+	total.innerHTML = times;					//输出获胜次数
 	// document.write(result.id)
 	
 	// if(res<'t' and res !== jd)
@@ -81,14 +81,14 @@ function calc(result){
 
 
 }
-function addAttrNo( ){
-	this.style.backgroundColor = "red";
-}
-function change(res){
-	var test = document.getElementById("test");
-	test.setAttribute("title","a good man");
+// function addAttrNo( ){
+// 	this.style.backgroundColor = "red";
+// }
+// function change(res){
+// 	var test = document.getElementById("test");
+// 	test.setAttribute("title","a good man");
 
-}
+// }
 
  
  
