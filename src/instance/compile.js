@@ -1,9 +1,15 @@
 exports._compile = function () {
-  this._compileNode(this.$el);
+  this.fragment = document.createDocumentFragment();
+  this._compileNode(this.$template);
+  this.$el.innerHTML = '';
+  this.fragment.childNodes.forEach((child) => {
+    this.$el.appendChild(child.cloneNode(true));// cloneNode() 方法克隆所有属性以及它们的值。 如果您需要克隆所有后代，请把 deep 参数设置 true，否则设置为 false。
+  });
 };
 
 exports._compileElement = function (node) {
-  console.log(node);
+  this.currentNode = document.createElement(node.tagName);
+  this.fragment.appendChild(this.currentNode);
   if (node.hasChildNodes()) {
     Array.from(node.childNodes).forEach(this._compileNode, this);
   }
@@ -30,7 +36,8 @@ exports._compileText = function (node) {
     return data[arr[0]][arr[1]];
   }
 
-  node.nodeValue = nodeValue;
+ /*  node.nodeValue = nodeValue; */
+  this.currentNode.appendChild(document.createTextNode(nodeValue));
 };
 
 exports._compileNode = function (node) {
