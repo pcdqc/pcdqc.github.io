@@ -6,4 +6,5 @@ exports._init = function (options) {
   this.$el = document.querySelector(options.el);
 
   this.$mount();
+  console.log('1')
 };
